@@ -25,3 +25,5 @@ const koalas = [
         imageURL: './assets/bob.jpeg'
     },
 ]
+
+export default koalas

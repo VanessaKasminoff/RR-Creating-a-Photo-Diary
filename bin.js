@@ -1,8 +1,11 @@
 #!/usr/bin/env node
 
-const open = require('open');
-const { exec } = require('child_process');
-const spawn = require('cross-spawn');  // Importing cross-spawn
+import open from './node_modules/open/index.js'
+// const open = require('open');
+import {exec} from 'child_process'
+// const { exec } = require('child_process');
+import spawn from 'cross-spawn'
+// const spawn = require('cross-spawn');  // Importing cross-spawn
 
 exec('npx webpack --mode="development"', () => {
     spawn('npx', ['webpack', '-watch', '--mode=development'], { stdio: 'inherit' });  // Notice we don't need shell: true here
